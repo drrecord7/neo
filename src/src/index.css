@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #f0f9ff;
+  --color-brand-100: #e0f2fe;
+  --color-brand-500: #0ea5e9;
+  --color-brand-600: #0284c7;
+  --color-brand-700: #0369a1;
+  --color-brand-900: #0c4a6e;
+}
+
+@utility glass {
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+@utility card {
+  background-color: white;
+  border-radius: 1rem;
+  border: 1px solid var(--color-slate-100);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #0f172a;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Recharts 컴포넌트 클릭(포커스) 시 발생하는 브라우저 기본 파란색/검은색 테두리 아웃라인 제거 */
+.recharts-wrapper, 
+.recharts-surface, 
+.recharts-wrapper:focus, 
+.recharts-surface:focus {
+  outline: none !important;
+  border: none !important;
+}
