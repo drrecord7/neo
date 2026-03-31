@@ -552,7 +552,8 @@ export default function App() {
                      {[
                         { id: 1, status: "Critical", label: "활동 동향", text: "거실 활동 20% 감소 포착.", corr: "최근 3일 냉장고 도어 감지 30% 감소와 강한 상관관계 (식사량 부진 의심)", icon: <AlertTriangle size={11} className="text-rose-400" /> },
                         { id: 2, status: "Warning", label: "수면 패턴", text: "야간 움직임 4회 점증, 호흡수 상승.", corr: "야간 심박수 변동폭이 평균 대비 15% 상승 (수면장애 및 무호흡증 가능성 징후)", icon: <Activity size={11} className="text-amber-400" /> },
-                        { id: 3, status: "Normal", label: "투약 순응도", text: "정규 복약 100% 완료.", corr: null, icon: null }
+                        { id: 3, status: "Warning", label: "식사 및 영양", text: "1일 1식 주의 패턴 지속 감지.", corr: "최근 체중 1.2kg 감소 및 전반적인 활동량 둔화 데이터와 강한 상관관계", icon: <AlertTriangle size={11} className="text-amber-400" /> },
+                        { id: 4, status: "Normal", label: "투약 순응도", text: "정규 복약 100% 완료.", corr: null, icon: null }
                      ].map((item) => (
                        <div key={item.id} className={`p-3 rounded-xl border flex flex-col gap-1.5 ${isDarkMode ? "bg-[#0f1522] border-slate-700/50" : "bg-slate-50 border-slate-200"}`}>
                          <div className="flex items-center gap-2">
